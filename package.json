@@ -1,0 +1,74 @@
+{
+    "name": "styled-theme-toolkit",
+    "version": "0.0.1",
+    "description": "A light weight toolkit for generating themes for css-in-js.",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "types": "dist/index.d.js",
+    "browser": "dist/script-loading-toolkit.min.js",
+    "unpkg": "dist/script-loading-toolkit.min.js",
+    "jsdelivr": "dist/script-loading-toolkit.min.js",
+    "scripts": {
+        "build": "node ./node_modules/rollup/bin/rollup -c",
+        "test": "node_modules/.bin/jest --config jestconfig.json",
+        "lint": "./node_modules/.bin/eslint ./src/*",
+        "toc": "./node_modules/.bin/markdown-toc -i ./README.md",
+        "clean": "rimraf dist/*",
+        "prepare": "npm run clean && npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags"
+    },
+    "keywords": [
+        "utility",
+        "toolkit",
+        "theme",
+        "css-in-js",
+        "react",
+        "styled-components",
+        "typescript"
+    ],
+    "author": "Alexander Frick <hello@alfrick.com.au>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Ethaywien/styled-theme-toolkit.git"
+    },
+    "devDependencies": {
+        "@babel/types": "^7.4.4",
+        "@types/express": "^4.16.1",
+        "@types/jest": "^24.0.11",
+        "@types/jsdom": "^12.2.3",
+        "@typescript-eslint/eslint-plugin": "^1.6.0",
+        "@typescript-eslint/parser": "^1.6.0",
+        "coveralls": "^3.0.3",
+        "eslint": "^5.16.0",
+        "eslint-plugin-import": "^2.16.0",
+        "express": "^4.16.4",
+        "jest": "^24.7.1",
+        "jsdoc": "^3.5.5",
+        "markdown-toc": "^1.2.0",
+        "rimraf": "^2.6.3",
+        "rollup": "^1.10.1",
+        "rollup-plugin-node-resolve": "^4.2.3",
+        "rollup-plugin-terser": "^4.0.4",
+        "rollup-plugin-typescript2": "^0.20.1",
+        "ts-jest": "^24.0.2",
+        "typescript": "^3.4.1"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "dependencies": {
+        "@types/ramda": "^0.26.9",
+        "polished": "^3.4.0",
+        "ramda": "^0.26.1",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-router-dom": "^5.0.0",
+        "react-scripts": "3.0.1",
+        "styled-components": "^4.2.1",
+        "styled-normalize": "^8.0.6"
+    }
+}

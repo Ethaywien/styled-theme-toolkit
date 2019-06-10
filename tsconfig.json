@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": { "*": ["types/*"] },
+        "target": "es5",
+        "module": "es6",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "outDir": "./dist",
+        "strict": true,
+        "moduleResolution": "node",
+        "lib": [
+            "es5",
+        ],
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "**/__mocks__/*",
+        "test",
+        "dist"
+    ],
+}
