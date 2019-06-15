@@ -1,6 +1,6 @@
 import { map, compose, join, ifElse, identity, either, equals } from 'ramda';
 import { UnitFn } from '../types';
-import { getTransformer } from './getTransformer';
+import { getUnitTransformer } from './getUnitTransformer';
 
 /**
  * Returns a string of the unit combined with the values.
@@ -10,7 +10,9 @@ import { getTransformer } from './getTransformer';
  * @param  {...number} values - Numeric values
  * @returns {function}
  */
-export const withUnit = (unit: string): UnitFn => (...values: number[]): string =>
+export const withUnit = (unit: string): UnitFn => (
+    ...values: number[]
+): string =>
     compose(
         join(' '),
         map(
@@ -31,11 +33,11 @@ export const withUnit = (unit: string): UnitFn => (...values: number[]): string 
 export const px = withUnit('px');
 /**
  * Takes a string or a number and returns the same string or a px value
- * 
+ *
  * @param  {(string|number)} val
  * @returns {string}
  */
-export const pxTransformer = getTransformer(px);
+export const pxTransformer = getUnitTransformer(px);
 /**
  * Returns an em value
  *
@@ -46,11 +48,11 @@ export const pxTransformer = getTransformer(px);
 export const em = withUnit('em');
 /**
  * Takes a string or a number and returns the same string or a em value
- * 
+ *
  * @param  {(string|number)} val
  * @returns {string}
  */
-export const emTransformer = getTransformer(em);
+export const emTransformer = getUnitTransformer(em);
 
 /**
  * Returns an rem value
@@ -61,11 +63,11 @@ export const emTransformer = getTransformer(em);
 export const rem = withUnit('rem');
 /**
  * Takes a string or a number and returns the same string or a rem value
- * 
+ *
  * @param  {(string|number)} val
  * @returns {string}
  */
-export const remTransformer = getTransformer(rem);
+export const remTransformer = getUnitTransformer(rem);
 
 /**
  * returns a percentage value
@@ -76,11 +78,11 @@ export const remTransformer = getTransformer(rem);
 export const percent = withUnit('%');
 /**
  * Takes a string or a number and returns the same string or a percent value
- * 
+ *
  * @param  {(string|number)} val
  * @returns {string}
  */
-export const percentTransformer = getTransformer(percent);
+export const percentTransformer = getUnitTransformer(percent);
 
 /**
  * returns a percentage value
@@ -91,8 +93,8 @@ export const percentTransformer = getTransformer(percent);
 export const pt = withUnit('pt');
 /**
  * Takes a string or a number and returns the same string or a pt value
- * 
+ *
  * @param  {(string|number)} val
  * @returns {string}
  */
-export const ptTransformer = getTransformer(pt);
+export const ptTransformer = getUnitTransformer(pt);

@@ -5,6 +5,7 @@
         "declaration": true,
         "outDir": "./test",
         "strict": true,
+        "strictFunctionTypes": false,
         "lib": [
             "dom",
             "es5",

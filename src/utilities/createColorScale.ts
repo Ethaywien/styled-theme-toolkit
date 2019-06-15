@@ -1,9 +1,6 @@
 import { curry } from 'ramda';
 import { lighten, darken } from 'polished';
-
-export interface ColorScale {
-    [color: string]: string;
-};
+import { ColorScale } from '../types';
 
 /**
  * Create a set of scaled (lightened and darkened) colours from the given scale, object and name.

@@ -8,6 +8,7 @@
         "declarationDir": "./dist",
         "outDir": "./dist",
         "strict": true,
+        "strictFunctionTypes": false,
         "moduleResolution": "node",
         "lib": [
             "es5",
