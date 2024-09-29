@@ -51,7 +51,7 @@
         "jsdoc": "^3.5.5",
         "markdown-toc": "^1.2.0",
         "rimraf": "^2.6.3",
-        "rollup": "^1.10.1",
+        "rollup": "^2.79.2",
         "rollup-plugin-node-resolve": "^4.2.3",
         "rollup-plugin-terser": "^4.0.4",
         "rollup-plugin-typescript2": "^0.20.1",
